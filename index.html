@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#F6EFE3" />
+    <title>Tarde de chicas con Nicole</title>
+    <meta property="og:title" content="Tarde de chicas con Nicole" />
+    <meta
+      property="og:description"
+      content="¡Estás invitada! Toca para abrir tu invitación."
+    />
+    <meta property="og:image" content="img/foto1.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,600..900,100;1,9..144,600..900,100&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bloqueado">
+    <!-- ============ SOBRE ============ -->
+    <div class="sobre-pantalla" id="sobrePantalla">
+      <p class="sobre__remite mono">
+        De: <span class="js-nombre">Nicole</span> · Para: ti
+      </p>
+      <div class="sobre" id="sobre">
+        <div class="sobre__fondo"></div>
+        <div class="sobre__carta"><p class="mano">¡Estás invitada!</p></div>
+        <div class="sobre__frente">
+          <span class="sobre__estampilla mono" aria-hidden="true"
+            >CR<br /><b>06·12</b></span
+          >
+        </div>
+        <div class="sobre__solapa"></div>
+        <button class="sello" id="sello" aria-label="Abrir la invitación">
+          <span>N</span>
+        </button>
+      </div>
+      <p class="sobre__texto mano">Toca para abrir la invitación</p>
+    </div>
+
+    <!-- ============ MÚSICA ============ -->
+    <audio id="musica" loop preload="none"></audio>
+    <button
+      class="musica-btn"
+      id="musicaBtn"
+      aria-label="Pausar música"
+      aria-pressed="true"
+      hidden
+    >
+      <svg
+        class="icono-vinilo"
+        aria-hidden="true"
+        width="26"
+        height="26"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 2a10 10 0 0 1 7 3" />
+      </svg>
+      <svg
+        class="icono-pausa"
+        aria-hidden="true"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <rect x="5" y="4" width="5" height="16" />
+        <rect x="14" y="4" width="5" height="16" />
+      </svg>
+    </button>
+
+    <main class="pagina">
+      <!-- ============ PORTADA ============ -->
+      <header class="portada">
+        <div class="portada__fila mono">
+          <span>Nº 09</span>
+          <span>Edición especial</span>
+        </div>
+        <p class="etiqueta mono">Estás invitada a una</p>
+        <h1 class="titulo">
+          <span class="titulo__l1">Tarde</span>
+          <span class="titulo__l2">de <em>chicas</em></span>
+        </h1>
+        <div class="portada__firma">
+          <button class="nombre mano" id="nombreSecreto">
+            con <span id="txtNombre">Nicole</span>
+          </button>
+          <div class="matasellos" role="img" aria-label="Cumple 9 años">
+            <span class="matasellos__arriba mono">cumple</span>
+            <span class="matasellos__num" id="txtEdad">9</span>
+            <span class="matasellos__abajo mono">años</span>
+          </div>
+        </div>
+
+        <aside class="postit mano">
+          psst… hay una sorpresa escondida en esta página, preciosa el nombre de
+          nicole
+        </aside>
+      </header>
+
+      <!-- ============ 01 FOTOS ============ -->
+      <section class="bloque" aria-labelledby="t-fotos">
+        <h2 class="rotulo mono" id="t-fotos"><span>01</span> El álbum</h2>
+        <div class="carrusel">
+          <div class="carrusel__pista" id="pista"></div>
+          <div class="carrusel__pie">
+            <span class="mono carrusel__contador" id="contador">1 / 5</span>
+            <div class="carrusel__puntos" id="puntos"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 02 CUÁNDO ============ -->
+      <section class="bloque" aria-labelledby="t-cuando">
+        <h2 class="rotulo mono" id="t-cuando"><span>02</span> Cuándo</h2>
+
+        <div class="fecha">
+          <span class="fecha__num" id="txtDiaNum">06</span>
+          <div class="fecha__lado">
+            <span class="fecha__mes" id="txtMes">diciembre</span>
+            <span class="fecha__dia mono" id="txtDiaSemana">domingo</span>
+          </div>
+        </div>
+
+        <ul class="lista-puntos">
+          <li><span class="mono">Llegada</span><i></i><b id="txtHora">—</b></li>
+          <li>
+            <span class="mono">Salida</span><i></i><b id="txtHoraFin">—</b>
+          </li>
+          <li><span class="mono">Lugar</span><i></i><b>Mi casa</b></li>
+        </ul>
+
+        <div class="talon" id="cuenta" aria-live="polite">
+          <span class="talon__titulo mono">Faltan</span>
+          <div class="talon__nums">
+            <div><b id="cDias">00</b><span class="mono">días</span></div>
+            <div><b id="cHoras">00</b><span class="mono">hrs</span></div>
+            <div><b id="cMin">00</b><span class="mono">min</span></div>
+            <div><b id="cSeg">00</b><span class="mono">seg</span></div>
+          </div>
+        </div>
+
+        <button class="btn btn--linea" id="btnCalendario">
+          <svg
+            aria-hidden="true"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="square"
+          >
+            <rect x="3" y="4" width="18" height="18" />
+            <path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4" />
+          </svg>
+          Agregar al calendario
+        </button>
+      </section>
+
+      <!-- ============ 03 MISIONES ============ -->
+      <section class="bloque" aria-labelledby="t-misiones">
+        <h2 class="rotulo mono" id="t-misiones">
+          <span>03</span> Misiones secretas
+        </h2>
+        <p class="nota mano">Toca cada sobre para descubrir tu misión →</p>
+        <div class="misiones" id="misiones"></div>
+      </section>
+
+      <!-- ============ 04 DÓNDE ============ -->
+      <section class="bloque" aria-labelledby="t-donde">
+        <h2 class="rotulo mono" id="t-donde"><span>04</span> Dónde</h2>
+        <figure class="mapa">
+          <iframe
+            id="mapa"
+            title="Mapa de la ubicación de la fiesta"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <figcaption class="mano">¡aquí te espero!</figcaption>
+        </figure>
+        <div class="rutas">
+          <a class="btn btn--waze" id="btnWaze" target="_blank" rel="noopener">
+            <svg
+              aria-hidden="true"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linejoin="round"
+            >
+              <path d="M3 11l18-8-8 18-2-8z" />
+            </svg>
+            Ir con Waze
+          </a>
+          <a class="btn btn--maps" id="btnMaps" target="_blank" rel="noopener">
+            <svg
+              aria-hidden="true"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 22s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z" />
+              <circle cx="12" cy="10" r="2.5" />
+            </svg>
+            Google Maps
+          </a>
+        </div>
+      </section>
+
+      <!-- ============ 05 CONFIRMAR ============ -->
+      <section class="bloque" id="confirmar" aria-labelledby="t-rsvp">
+        <h2 class="rotulo mono" id="t-rsvp"><span>05</span> ¿Vienes?</h2>
+
+        <form class="cuaderno" id="formulario" novalidate>
+          <label for="invitada"
+            >¿Cómo se llama la invitada y mamá o papá?</label
+          >
+          <input
+            id="invitada"
+            name="invitada"
+            type="text"
+            autocomplete="off"
+            maxlength="40"
+            placeholder="escribe tu nombre aquí"
+            required
+          />
+          <p class="error mono" id="errorNombre" hidden>
+            ↑ Escribe tu nombre para tu Pase VIP
+          </p>
+
+          <label for="mensaje"
+            >Mensajito para <span class="js-nombre">Nicole</span>
+            <span class="opcional">(si quieres)</span></label
+          >
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="3"
+            maxlength="200"
+            placeholder="algo bonito para la cumpleañera"
+          ></textarea>
+
+          <button class="btn btn--principal" type="submit">
+            Confirmar por WhatsApp
+          </button>
+          <p class="error mono" id="errorWhats" hidden>
+            Todavía falta configurar el número de WhatsApp.
+          </p>
+        </form>
+
+        <!-- Pase VIP -->
+        <div class="pase" id="pase" hidden>
+          <div class="pase__boleto">
+            <div class="pase__cuerpo">
+              <span class="pase__etiqueta mono">Pase VIP</span>
+              <p class="pase__nombre mano" id="paseNombre">—</p>
+              <p class="pase__evento">
+                Tarde de chicas con <span class="js-nombre">Nicole</span>
+              </p>
+              <p class="pase__fecha mono" id="paseFecha">—</p>
+            </div>
+            <div class="pase__talon mono">
+              <span>Admite</span><b>1</b><span id="paseSerie">Nº 000</span>
+            </div>
+          </div>
+          <p class="nota mano">¡Tómale captura a tu pase!</p>
+        </div>
+      </section>
+
+      <footer class="pie">
+        <span class="mono">Fin</span>
+        <p class="mano">Con cariño, <span class="js-nombre">Nicole</span></p>
+      </footer>
+    </main>
+
+    <div class="efectos" id="efectos" aria-hidden="true"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
