@@ -25,8 +25,8 @@ const CONFIG = {
   // Fotos del carrusel (5). Si un archivo no existe, se muestra un espacio rosado.
   fotos: [
     { src: "img/bebe.webp", texto: "bebé Nicole" },
-    { src: "img/6anos.webp", texto: "mis 7" },
-    { src: "img/princesa.webp", texto: "mis 8" },
+    { src: "img/6anos.webp", texto: "mis 4" },
+    { src: "img/princesa.webp", texto: "mis 6" },
     { src: "img/scouts.webp", texto: "Amo los Scouts!" },
     { src: "img/baile.webp", texto: "mi lugar feliz" },
     { src: "img/Sabik.webp", texto: "¡me encanta bailar!" },
